@@ -13,3 +13,9 @@
 body {
     background-color: gray;
 }
+
+#p {
+    position:absolute;
+    left: 350px;
+    top: 10px;
+}

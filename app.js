@@ -5,34 +5,34 @@ var btn = document.getElementById("btn");
 
 
 var musubi =    {
-    imagesrc1:"http://www.unclejerryskitchen.com/wp-content/uploads/2009/03/Video_Thumbnail-1024x1024.jpg",
+    imagesrc:"http://www.unclejerryskitchen.com/wp-content/uploads/2009/03/Video_Thumbnail-1024x1024.jpg",
     name: "Musubi",
     adjective: "Tasty",
     verb: "eat da musubi"
     };
 var pizza =     {
-        imagesrc2:"https://www.cicis.com/media/1138/pizza_trad_pepperoni.png",
+        imagesrc:"https://www.cicis.com/media/1138/pizza_trad_pepperoni.png",
         name: "Pizza",
         adjective: "Tasty",
         verb: "eat da pizza"
     };
 
 var soda =    {
-        imagesrc3:"http://cdn.phillymag.com/wp-content/uploads/2016/06/soda-tax-philadelphia-940x540.jpg",
+        imagesrc:"http://cdn.phillymag.com/wp-content/uploads/2016/06/soda-tax-philadelphia-940x540.jpg",
         name: "Soda",
         adjective: "Tasty",
         verb: "drink da soda"
     }
 
 var manapua =    { 
-        imagesrc4:"http://cookinghawaiianstyle.com/images/recipes/1313514828manapua.jpg",
+        imagesrc:"http://cookinghawaiianstyle.com/images/recipes/1313514828manapua.jpg",
         name: "manapua",
         adjective: "Tasty",
         verb: "eat da manapua"
     };
 
 var chowmein =     {
-        imagesrc5:"https://dinnerthendessert.com/wp-content/uploads/2016/02/Classic-Chinese-Chow-Mein-5.jpg",
+        imagesrc:"https://dinnerthendessert.com/wp-content/uploads/2016/02/Classic-Chinese-Chow-Mein-5.jpg",
         name: "chowmein",
         adjective: "Tasty",
         verb: "eat da chowmein"
@@ -41,11 +41,13 @@ var chowmein =     {
 
 
 
-var z = [musubi.imagesrc1, pizza.imagesrc2, soda.imagesrc3, manapua.imagesrc4, chowmein.imagesrc5];
+var z = [musubi, pizza, soda, manapua, chowmein];
 
 
 btn.addEventListener("click", function(){
     var x = Math.floor(Math.random() * 5 + 0);
-    var imgchooser = z[x];
+    var imgchooser = z[x].imagesrc;
     btn.src = imgchooser;
+    p.innerHTML = z[x].verb + " which is " + z[x].adjective;
 });
+   
